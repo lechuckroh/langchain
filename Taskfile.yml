@@ -13,12 +13,18 @@ tasks:
     cmds:
       - pip3 install -r requirements.txt
   
-  pull-model:
+  freeze:
+    cmds:
+      - pip3 freeze > requirements.txt
+
+  pull-llama-korean:
+    summary: "Pull Llama3.2-korean model"
     cmds:
       - wget --output-document ./models/llma3.2-korean/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M.gguf https://huggingface.co/Bllossom/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M/resolve/main/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M.gguf?download=true
       - ollama create llama3.2-korean -f ./models/llma3.2-korean/Modelfile
 
-  run-model:
+  llama-korean:
+    summary: "Run Llama3.2-korean model"
     cmds:
       - ollama run llama3.2-korean
 
@@ -26,3 +32,7 @@ tasks:
     summary: "Start Open WebUI server"
     cmds:
       - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+
+  run:
+    cmds:
+      - python3 src/llama.py
