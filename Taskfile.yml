@@ -13,3 +13,11 @@ tasks:
     cmds:
       - pip3 install -r requirements.txt
   
+  pull-model:
+    cmds:
+      - wget --output-document ./models/llma3.2-korean/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M.gguf https://huggingface.co/Bllossom/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M/resolve/main/llama-3.2-Korean-Bllossom-3B-gguf-Q4_K_M.gguf?download=true
+      - ollama create llama3.2-korean -f ./models/llma3.2-korean/Modelfile
+
+  run-model:
+    cmds:
+      - ollama run llama3.2-korean
