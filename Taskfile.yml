@@ -44,3 +44,7 @@ tasks:
   run-streaming:
     cmds:
       - python3 src/llama_streaming.py
+
+  run-few-shot:
+    cmds:
+      - python3 src/llama_few_shot.py
