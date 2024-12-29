@@ -48,3 +48,11 @@ tasks:
   run-few-shot:
     cmds:
       - python3 src/llama_few_shot.py
+
+  run-output-parser:
+    cmds:
+      - python3 src/llama_output_parser.py
+
+  run-pydantic-output-parser:
+    cmds:
+      - python3 src/llama_pydantic_output_parser.py
