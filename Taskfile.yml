@@ -12,7 +12,7 @@ tasks:
     summary: "install dependency"
     cmds:
       - pip3 install -r requirements.txt
-  
+
   freeze:
     cmds:
       - pip3 freeze > requirements.txt
@@ -36,3 +36,7 @@ tasks:
   run:
     cmds:
       - python3 src/llama.py
+
+  run-chat:
+    cmds:
+      - python3 src/llama_chat.py
