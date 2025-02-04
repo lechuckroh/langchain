@@ -1,9 +1,36 @@
 # https://taskfile.dev
 
-version: "3"
+    version: "3"
 
-tasks:
-  install:
-    summary: "install dependency"
-    cmds:
-      - pnpm install
+    tasks:
+      build:
+        cmds:
+          - pnpm -r --parallel --filter './packages/*' build
+
+      clean:
+        cmds:
+          - pnpm --parallel --filter './packages/*' clean
+
+      format:
+        cmds:
+          - pnpm format
+
+      lint:
+        cmds:
+          - pnpm lint
+
+      install:
+        cmds:
+          - pnpm install
+
+      test:
+        cmds:
+          - pnpm -r test
+
+      update:
+        cmds:
+          - pnpm update --latest
+
+      watch:
+        cmds:
+          - pnpm --parallel --filter './packages/*' watch

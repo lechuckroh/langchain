@@ -1,10 +1,14 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Node 22 application",
+	"display": "Node 22 library",
 	"extends": "./node22.json",
 	"exclude": ["node_modules", "dist"],
 	"compilerOptions": {
 		"allowJs": false,
-		"noImplicitAny": true
+		"noImplicitAny": true,
+		"declaration": true,
+		"declarationMap": true,
+		"incremental": true,
+		"isolatedModules": true
 	}
 }

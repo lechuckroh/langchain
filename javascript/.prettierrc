@@ -1,0 +1,10 @@
+{
+    "importOrder": ["^@workspace/(.*)$", "^[./]"],
+    "importOrderSeparation": true,
+    "importOrderParserPlugins": ["decorators-legacy", "typescript"],
+    "singleQuote": true,
+    "plugins": [
+        "@trivago/prettier-plugin-sort-imports",
+        "prettier-plugin-sh"
+    ]
+}
