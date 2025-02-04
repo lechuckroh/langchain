@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "langchain.js-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test"
+  },
+  "author": "Lechuck Roh",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "22.13.1",
+    "typescript": "5.7.3"
+  }
+}
